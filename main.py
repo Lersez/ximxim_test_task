@@ -1,5 +1,5 @@
-TEMPLATE_TASK_PATH = "test_task\\test_data\\test_task.pdf"
-TEMPLATE_OUTPUT_FOLDER_PATH = 'test_task\output_data\\'
+TEMPLATE_TASK_PATH = "test_data\\test_task.pdf"
+TEMPLATE_OUTPUT_FOLDER_PATH = 'output_data\\'
 
 # #----------------------------------------------------------------------------------------------------------
 # #VER3 - PDFQuery
@@ -17,8 +17,8 @@ def extract_data_from_pdf(file_path):
 
     return text
 
-data = extract_data_from_pdf(TEMPLATE_TASK_PATH)
-print(data.text())
+data = extract_data_from_pdf(TEMPLATE_TASK_PATH).text()
+print(data)
 
 # Write-Overwrites
 file_out = open(TEMPLATE_OUTPUT_FOLDER_PATH + "template_" + VER + ".txt", "w")   # write mode
